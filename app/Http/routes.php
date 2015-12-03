@@ -14,4 +14,6 @@
 Route::get('/', function () {
     return view('pages.home');
 });
-Route::get('admin', 'PagesController@admin');
+/*Route::get('admin', 'PagesController@admin');*/
+/*Route::get('/', 'PagesController@index');
+Route::get('admin', 'PagesController@admin');*/

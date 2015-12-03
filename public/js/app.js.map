@@ -1,1 +1,1 @@
-{"version":3,"sources":["app.js"],"names":[],"mappings":"AAAA","file":"app.js","sourcesContent":[""],"sourceRoot":"/source/"}
+{"version":3,"sources":["app.js"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA","file":"app.js","sourcesContent":["var app = angular.module('app', ['ngMaterial']);\n\napp.config(function ($interpolateProvider) {\n\n    $interpolateProvider.startSymbol('<%');\n    $interpolateProvider.endSymbol('%>');\n});"],"sourceRoot":"/source/"}
