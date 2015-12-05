@@ -1,0 +1,1 @@
+{"version":3,"sources":["UsersController.js"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA","file":"all.js","sourcesContent":["(function () {\n    'use stric  t';\n    angular\n        .module('don')\n        .controller('UsersController', function($scope){\n        console.log('gale');\n        });\n})();"],"sourceRoot":"/source/"}

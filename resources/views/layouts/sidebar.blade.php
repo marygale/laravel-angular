@@ -1,9 +1,7 @@
 <!-- Left panel : Navigation area -->
 <aside id="left-panel">
-
-    <!-- User info -->
     <div class="login-info">
-				<span> <!-- User image size is adjusted inside CSS, it should stay as it -->
+				<span>
 
 					<a href="javascript:void(0);" id="show-shortcut">
                         <img src="img/avatars/1.png" alt="me" class="online" />
@@ -25,10 +23,10 @@
                 <a href="#"><i class="fa fa-lg fa-fw fa-user"></i> <span class="menu-item-parent">Users</span></a>
                 <ul>
                     <li>
-                        <a href="user/allusers">All Users</a>
+                        <a href="user/all">All Users</a>
                     </li>
                     <li>
-                        <a href="users/newusers">New Users</a>
+                        <a href="users/create">New Users</a>
                     </li>
                     <li>
                         <a href="users/profile">Your Profile</a>

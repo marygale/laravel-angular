@@ -1,19 +1,8 @@
-{{--@include('layouts.header')
-@include('layouts.sidebar')
-<div class="container">
-    @yield('content')
-</div>--}}
-{{--
-@include('partials.footer')--}}
-
-
-
-
 @include('layouts.header')
 @include('layouts.sidebar')
 
 <!-- MAIN PANEL -->
-<div id="main" role="main">
+<div id="main" role="main" ng-controller="UsersController as uc">
 
     <!-- RIBBON -->
     <div id="ribbon">
@@ -125,6 +114,12 @@
 <!-- FastClick: For mobile devices -->
 <script src="js/plugin/fastclick/fastclick.js"></script>
 
+<!-- Angular js -->
+<script src="js/vendor/angular.js"></script>
+<script src="js/vendor/angular-ui-router.js"></script>
+<script src="js/app.js"></script>
+<script src="js/build/controllers.min.js"></script>
+
 <!--[if IE 7]>
 
 <h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
@@ -133,9 +128,6 @@
 
 <!-- Demo purpose only -->
 <script src="js/demo.js"></script>
-
-<!-- MAIN APP JS FILE -->
-<script src="js/app.js"></script>
 
 <!-- PAGE RELATED PLUGIN(S)
 <script src="..."></script>-->

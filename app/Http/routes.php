@@ -14,6 +14,12 @@
 Route::get('/', function () {
     return view('pages.home');
 });
+Route::group(['prefix' => 'admin'], function () {
+    Route::post('users/create', function ()    {
+        // Matches The "/admin/users" URL
+    });
+});
+
 /*Route::get('admin', 'PagesController@admin');*/
 /*Route::get('/', 'PagesController@index');
 Route::get('admin', 'PagesController@admin');*/

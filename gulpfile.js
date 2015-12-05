@@ -1,20 +1,30 @@
 var elixir = require('laravel-elixir');
+    bowerPath  = 'vendor/bower_components/';
+    bowerDestPath  = 'public/js/';
 
-/*
- |--------------------------------------------------------------------------
- | Elixir Asset Management
- |--------------------------------------------------------------------------
- |
- | Elixir provides a clean, fluent API for defining some basic Gulp tasks
- | for your Laravel application. By default, we are compiling the Sass
- | file for our application, as well as publishing vendor resources.
- |
- */
-
+    assets = {
+        js:{
+            controllers: {
+                files:[
+                    "UsersController.js",
+                    "PagesController.js"
+                ],
+                dest:"public/js/build/controllers.min.js",
+                dir: "public/js/controllers"
+            },
+            services:{
+                files:[
+                    "UsersService.js"
+                ],
+                dest:"public/js/build/services.min.js",
+                dir:"public/js/services"
+            }
+        }
+    }
 elixir(function(mix) {
-    // Application Scripts
-    /*mix.scripts([
-        '../../../resources/scripts/app.js'
-    ], 'public/js/app.js');
-    mix.sass('app.scss');*/
+    mix
+        .copy(bowerPath + 'angular/angular.js',  bowerDestPath + 'vendor/angular.js')
+        .copy(bowerPath + 'angular-ui-router/release/angular-ui-router.js',  bowerDestPath + 'vendor/angular-ui-router.js')
+        .scripts(assets.js.controllers.files, assets.js.controllers.dest, assets.js.controllers.dir)
+        .scripts(assets.js.services.files, assets.js.services.dest, assets.js.services.dir);
 });

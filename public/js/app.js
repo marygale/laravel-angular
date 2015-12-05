@@ -1387,3 +1387,13 @@ $('body').on('click', function(e) {
         }
     });
 });
+
+(function () {
+  'use strict';
+
+  angular.module('don', ['DonRoutes', 'DonControllers', 'DonServices']);
+
+  angular.module('DonRoutes', ['ui.router']);
+  angular.module('DonServices', []);
+  angular.module('DonControllers', []);
+})();
