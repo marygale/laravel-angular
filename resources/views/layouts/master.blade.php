@@ -61,20 +61,20 @@
 <!--================================================== -->
 
 <!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
-<script data-pace-options='{ "restartOnRequestAfter": true }' src="js/plugin/pace/pace.min.js"></script>
+<script data-pace-options='{ "restartOnRequestAfter": true }' src="{{asset('js/plugin/pace/pace.min.js')}}"></script>
 
 <!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 <script>
     if (!window.jQuery) {
-        document.write('<script src="js/libs/jquery-2.0.2.min.js"><\/script>');
+        document.write('<script src="{{asset('js/libs/jquery-2.0.2.min.js')}}"><\/script>');
     }
 </script>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 <script>
     if (!window.jQuery.ui) {
-        document.write('<script src="js/libs/jquery-ui-1.10.3.min.js"><\/script>');
+        document.write('<script src="{{asset('js/libs/jquery-ui-1.10.3.min.js')}}"><\/script>');
     }
 </script>
 
@@ -82,43 +82,43 @@
 <script src="js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script> -->
 
 <!-- BOOTSTRAP JS -->
-<script src="js/bootstrap/bootstrap.min.js"></script>
+<script src="{{asset('js/bootstrap/bootstrap.min.js')}}"></script>
 
 <!-- CUSTOM NOTIFICATION -->
-<script src="js/notification/SmartNotification.min.js"></script>
+<script src="{{asset('js/notification/SmartNotification.min.js')}}"></script>
 
 <!-- JARVIS WIDGETS -->
-<script src="js/smartwidgets/jarvis.widget.min.js"></script>
+<script src="{{asset('js/smartwidgets/jarvis.widget.min.js')}}"></script>
 
 <!-- EASY PIE CHARTS -->
-<script src="js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+<script src="{{asset('js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js')}}"></script>
 
 <!-- SPARKLINES -->
-<script src="js/plugin/sparkline/jquery.sparkline.min.js"></script>
+{{--<script src="js/plugin/sparkline/jquery.sparkline.min.js"></script>--}}
 
 <!-- JQUERY VALIDATE -->
-<script src="js/plugin/jquery-validate/jquery.validate.min.js"></script>
+<script src="{{asset('js/plugin/jquery-validate/jquery.validate.min.js')}}"></script>
 
 <!-- JQUERY MASKED INPUT -->
-<script src="js/plugin/masked-input/jquery.maskedinput.min.js"></script>
+<script src="{{asset('js/plugin/masked-input/jquery.maskedinput.min.js')}}"></script>
 
 <!-- JQUERY SELECT2 INPUT -->
-<script src="js/plugin/select2/select2.min.js"></script>
+<script src="{{asset('js/plugin/select2/select2.min.js')}}"></script>
 
 <!-- JQUERY UI + Bootstrap Slider -->
-<script src="js/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
+<script src="{{asset('js/plugin/bootstrap-slider/bootstrap-slider.min.js')}}"></script>
 
 <!-- browser msie issue fix -->
-<script src="js/plugin/msie-fix/jquery.mb.browser.min.js"></script>
+<script src="{{asset('js/plugin/msie-fix/jquery.mb.browser.min.js')}}"></script>
 
 <!-- FastClick: For mobile devices -->
-<script src="js/plugin/fastclick/fastclick.js"></script>
+<script src="{{asset('js/plugin/fastclick/fastclick.js')}}"></script>
 
 <!-- Angular js -->
-<script src="js/vendor/angular.js"></script>
-<script src="js/vendor/angular-ui-router.js"></script>
-<script src="js/app.js"></script>
-<script src="js/build/controllers.min.js"></script>
+<script src="{{asset('js/vendor/angular.js')}}"></script>
+<script src="{{asset('js/vendor/angular-ui-router.js')}}"></script>
+<script src="{{asset('js/app.js')}}"></script>
+<script src="{{asset('js/build/controllers.min.js')}}"></script>
 
 <!--[if IE 7]>
 
@@ -127,7 +127,7 @@
 <![endif]-->
 
 <!-- Demo purpose only -->
-<script src="js/demo.js"></script>
+<script src="{{asset('js/demo.js')}}"></script>
 
 <!-- PAGE RELATED PLUGIN(S)
 <script src="..."></script>-->
@@ -138,7 +138,7 @@
 
     $(document).ready(function() {
 
-        pageSetUp();
+        /*pageSetUp();*/
 
         function hide_divs(search) {
             $(".demo-icon-font").hide(); // hide all divs
@@ -167,24 +167,6 @@
     })
 
 </script>
-
-<!-- Your GOOGLE ANALYTICS CODE Below -->
-<script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-        var ga = document.createElement('script');
-        ga.type = 'text/javascript';
-        ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(ga, s);
-    })();
-
-</script>
-
 </body>
 
 </html>
