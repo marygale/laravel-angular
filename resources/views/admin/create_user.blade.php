@@ -20,7 +20,7 @@
             <!-- widget content -->
             <div class="widget-body no-padding">
 
-                <form id="smart-form-register" class="smart-form client-form">
+                    {!! Form::open(['url' => action('Auth\AuthController@register'), 'id' => "smart-form-register", 'class' => "smart-form client-form"]) !!}
                     <fieldset>
                         <section>
                             <label class="input"> <i class="icon-append fa fa-user"></i>
@@ -42,7 +42,7 @@
 
                         <section>
                             <label class="input"> <i class="icon-append fa fa-lock"></i>
-                                <input type="password" name="passwordConfirm" placeholder="Confirm password">
+                                <input type="password" name="password_confirmation" placeholder="Confirm password">
                                 <b class="tooltip tooltip-bottom-right">Don't forget your password</b> </label>
                         </section>
                     </fieldset>
@@ -51,24 +51,36 @@
                         <div class="row">
                             <section class="col col-6">
                                 <label class="input">
-                                    <input type="text" name="firstname" placeholder="First name">
+                                    <input type="text" name="title" placeholder="Title">
                                 </label>
                             </section>
                             <section class="col col-6">
                                 <label class="input">
-                                    <input type="text" name="lastname" placeholder="Last name">
+                                    <input type="text" name="first_name" placeholder="First name">
                                 </label>
                             </section>
                         </div>
 
                         <div class="row">
                             <section class="col col-6">
+                                <label class="input">
+                                    <input type="text" name="middle_name" placeholder="Middle name">
+                                </label>
+                            </section>
+                            <section class="col col-6">
+                                <label class="input">
+                                    <input type="text" name="last_name" placeholder="Last name">
+                                </label>
+                            </section>
+                        </div>
+                        <div class="row">
+                            <section class="col col-6">
                                 <label class="select">
                                     <select name="gender">
                                         <option value="0" selected="" disabled="">Gender</option>
-                                        <option value="1">Male</option>
-                                        <option value="2">Female</option>
-                                        <option value="3">Prefer not to answer</option>
+                                        <option value="m">Male</option>
+                                        <option value="f">Female</option>
+                                        <option value="e">Prefer not to answer</option>
                                     </select> <i></i> </label>
                             </section>
                             <section class="col col-6">
@@ -99,7 +111,8 @@
                             Thank you for your registration!
                         </p>
                     </div>
-                </form>
+                {{--</form>--}}
+                {!! Form::close() !!}
 
             </div>
             <!-- end widget content -->

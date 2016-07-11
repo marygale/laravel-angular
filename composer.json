@@ -6,17 +6,28 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.1.*"
+        "laravel/framework": "~5.2.0",
+        "laravelcollective/html": "~5.2.0",
+        "aws/aws-sdk-php": "~3.5",
+        "aws/aws-sdk-php-laravel": "~3.0.3",
+        "league/flysystem-aws-s3-v3": "~1.0.1",
+        "guzzlehttp/guzzle": "~6.0",
+        "intervention/image": "^2.3"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~4.0",
-        "phpspec/phpspec": "~2.1"
+        "phpspec/phpspec": "~2.1",
+        "barryvdh/laravel-ide-helper": "^2.1",
+        "doctrine/dbal": "^2.5",
+        "symfony/dom-crawler": "~3.0",
+        "symfony/css-selector": "~3.0"
     },
     "autoload": {
         "classmap": [
-            "database"
+            "database",
+            "app/Models"
         ],
         "psr-4": {
             "App\\": "app/"

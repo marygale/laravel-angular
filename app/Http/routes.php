@@ -1,15 +1,14 @@
 <?php
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('pages.home');
-});
-Route::group(['prefix' => 'admin'], function () {
-    /*Route::post('users/create', function ()    {
-        // Matches The "/admin/users" URL
-        return view('admin.new');
-    });*/
-    Route::get('users/create', 'UserController@create');
-});
-Route::get('users/create', 'UserController@create');
+});*/
+
+Route::get('/', 'HomepageController@index');
+
+//Registration Routes
+Route::get('admin/user/create', 'UserController@create');
+Route::post('auth/register', 'Auth\AuthController@register');
+//Route::post('admin/user/create', 'UserController@post_create');
 
 

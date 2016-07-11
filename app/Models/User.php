@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
@@ -21,14 +21,31 @@ class User extends Model implements AuthenticatableContract,
      *
      * @var string
      */
-    protected $table = 'users';
+    protected $table = 'user';
+    protected $primaryKey = 'user';
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['name', 'email', 'password'];
+    protected $fillable = [
+        'username',
+        'email',
+        'password',
+        'first_name',
+        'middle_name',
+        'last_name',
+        'title',
+        'description',
+        'country',
+        'state',
+        'city',
+        'cell_phone',
+        'gender',
+        'role'
+
+    ];
 
     /**
      * The attributes excluded from the model's JSON form.

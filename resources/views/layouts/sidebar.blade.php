@@ -4,7 +4,7 @@
 				<span>
 
 					<a href="javascript:void(0);" id="show-shortcut">
-                        <img src="img/avatars/1.png" alt="me" class="online" />
+                        <img src="{{ asset('img/avatars/1.png') }}" alt="me" class="online" />
 						<span>
 							mary.gale
 						</span>
@@ -26,7 +26,7 @@
                         <a href="user/all">All Users</a>
                     </li>
                     <li>
-                        <a href="users/create">New Users</a>
+                        <a href="{!! action('UserController@create') !!}">New Users</a>
                     </li>
                     <li>
                         <a href="users/profile">Your Profile</a>

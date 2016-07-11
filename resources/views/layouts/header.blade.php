@@ -37,7 +37,7 @@
     <div id="logo-group">
 
         <!-- PLACE YOUR LOGO HERE -->
-        <span id="logo"> <img src="img/logo.png" alt="SmartAdmin"> </span>
+        <span id="logo"> <img src="{{ asset('img/logo.png') }}" alt="SmartAdmin"> </span>
         <!-- END LOGO PLACEHOLDER -->
 
         <!-- Note: The activity badge color changes when clicked and resets the number to 0
@@ -145,16 +145,16 @@
         <!-- multiple lang dropdown : find all flags in the image folder -->
         <ul class="header-dropdown-list hidden-xs">
             <li>
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img alt="" src="img/flags/us.png"> <span> US </span> <i class="fa fa-angle-down"></i> </a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img alt="" src="{{ asset('img/flags/us.png') }}"> <span> US </span> <i class="fa fa-angle-down"></i> </a>
                 <ul class="dropdown-menu pull-right">
                     <li class="active">
-                        <a href="javascript:void(0);"><img alt="" src="img/flags/us.png"> US</a>
+                        <a href="javascript:void(0);"><img alt="" src="{{ asset('img/flags/us.png') }}"> US</a>
                     </li>
                     <li>
-                        <a href="javascript:void(0);"><img alt="" src="img/flags/es.png"> Spanish</a>
+                        <a href="javascript:void(0);"><img alt="" src="{{ asset('img/flags/es.png') }}"> Spanish</a>
                     </li>
                     <li>
-                        <a href="javascript:void(0);"><img alt="" src="img/flags/de.png"> German</a>
+                        <a href="javascript:void(0);"><img alt="" src="{{ asset('img/flags/de.png') }}"> German</a>
                     </li>
                 </ul>
             </li>
