@@ -3,8 +3,8 @@
 Route::get('/', 'HomepageController@index');
 
 /** Login **/
-Route::get('auth/login', 'Auth\AuthController@showLoginForm');
-Route::post('auth/login', 'Auth\AuthController@login');
+Route::get('login', 'Auth\AuthController@showLoginForm');
+Route::post('login', 'Auth\AuthController@login');
 
 /** Registration Routes **/
 Route::get('admin/user/create', 'UserController@create');
