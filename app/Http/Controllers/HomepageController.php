@@ -11,6 +11,7 @@ class HomepageController extends Controller
 {
     public function index()
     {
-        return view('pages.home');
+        $isLogin = \Auth::check();
+        return view('guest.index', compact('isLogin'));
     }
 }
