@@ -23,7 +23,7 @@
                 <a href="#"><i class="fa fa-lg fa-fw fa-user"></i> <span class="menu-item-parent">Users</span></a>
                 <ul>
                     <li>
-                        <a href="user/all">All Users</a>
+                        <a href="{!! action('UserController@user_list') !!}">All Users</a>
                     </li>
                     <li>
                         <a href="{!! action('UserController@create') !!}">New Users</a>
