@@ -10,12 +10,11 @@ class DashboardController extends Controller
 {
     public function __construct()
     {
-        //$this->middleware('auth');
        $this->middleware('super_admin');
     }
 
     public function dashboard()
-    {
+    {dd(\Auth::check());
        return view('admin.dashboard.dashboard');
     }
 }
