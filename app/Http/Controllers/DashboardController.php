@@ -7,6 +7,9 @@ use App\Http\Requests\Requests;
 
 class DashboardController extends Controller{
 
+    /**
+     * DashboardController constructor.
+     */
     public function __construct()
     {
         $this->middleware('super_admin');
