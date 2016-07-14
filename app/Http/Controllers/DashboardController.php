@@ -9,6 +9,7 @@ class DashboardController extends Controller{
 
     /**
      * DashboardController constructor.
+     * @param
      */
     public function __construct()
     {
