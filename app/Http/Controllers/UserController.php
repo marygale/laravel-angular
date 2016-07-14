@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 use App\Http\Requests;
 
@@ -19,8 +20,9 @@ class UserController extends Controller
         return view('admin.create_user');
     }
 
-    public function user_list()
+    public function user_list(User $user)
     {
-        return view('admin.user_list');
+        $users = $user->get_all_user();
+        return view('admin.user_list', compact('users'));
     }
 }

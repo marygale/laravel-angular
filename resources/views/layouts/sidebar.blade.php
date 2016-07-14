@@ -80,7 +80,18 @@
                 <a href="calendar.html"><i class="fa fa-lg fa-fw fa-calendar"><em>3</em></i> <span class="menu-item-parent">Calendar</span></a>
             </li>
             <li>
-                <a href="widgets.html"><i class="fa fa-lg fa-fw fa-list-alt"></i> <span class="menu-item-parent">Widgets</span></a>
+                <a href="#"><i class="fa fa-lg fa-fw fa-list-alt"></i> <span class="menu-item-parent">Projects</span></a>
+                <ul>
+                    <li>
+                        <a href="forum.html">Add Project</a>
+                    </li>
+                    <li>
+                        <a href="profile.html">Project List</a>
+                    </li>
+                    <li>
+                        <a href="timeline.html">Others</a>
+                    </li>
+                </ul>
             </li>
             <li>
                 <a href="gallery.html"><i class="fa fa-lg fa-fw fa-picture-o"></i> <span class="menu-item-parent">Gallery</span></a>
