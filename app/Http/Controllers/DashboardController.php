@@ -20,4 +20,9 @@ class DashboardController extends Controller{
     {
         return view('admin.dashboard.dashboard');
     }
+
+    public function project()
+    {
+        return view('admin.dashboard.project');
+    }
 }
