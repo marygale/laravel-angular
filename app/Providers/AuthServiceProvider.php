@@ -24,8 +24,12 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot(GateContract $gate)
     {
-        $this->registerPolicies($gate);
+        parent::registerPolicies($gate);
 
-        //
+        $gate->define('super_admin', function(){
+           $auth_user = \Auth::user();
+            if($auth_user) return \Auth::user()->super_admin === 1;
+            else return false;
+        });
     }
 }
