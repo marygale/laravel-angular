@@ -12,7 +12,7 @@
     @can('super_admin')
         <span id="login-header-space"> <a href="{{ action('Auth\AuthController@logout') }}" class="btn btn-danger">Logout</a> </span>
     @else
-        <span id="login-header-space"> <a href="{{action('Auth\AuthController@login')}}" class="hidden-mobile">Login</a> <a href="register.html" class="btn btn-danger">Create account</a> </span>
+        <span id="login-header-space"> <a href="{{action('Auth\AuthController@login')}}" class="hidden-mobile">Login</a> <a href="{!! action('GuestController@create_first') !!}" class="btn btn-danger">Create account</a> </span>
     @endcan
 
 
