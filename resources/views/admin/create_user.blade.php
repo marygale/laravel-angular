@@ -24,25 +24,29 @@
                     <fieldset>
                         <section>
                             <label class="input"> <i class="icon-append fa fa-user"></i>
-                                <input type="text" name="username" placeholder="Username">
+                                {{--<input type="text" name="username" placeholder="Username">--}}
+                                {!! Form::text('username', null, ['placeholder' => 'Username']) !!}
                                 <b class="tooltip tooltip-bottom-right">Needed to enter the website</b> </label>
                         </section>
 
                         <section>
                             <label class="input"> <i class="icon-append fa fa-envelope"></i>
-                                <input type="email" name="email" placeholder="Email address">
+                                {{--<input type="email" name="email" placeholder="Email address">--}}
+                                {!! Form::email('email', null, ['placeholder' => 'Email address']) !!}
                                 <b class="tooltip tooltip-bottom-right">Needed to verify your account</b> </label>
                         </section>
 
                         <section>
                             <label class="input"> <i class="icon-append fa fa-lock"></i>
-                                <input type="password" name="password" placeholder="Password" id="password">
+                                {{--<input type="password" name="password" placeholder="Password" id="password">--}}
+                                {!! Form::password('password', null, ['placeholder' => 'Password', 'id' => 'password']) !!}
                                 <b class="tooltip tooltip-bottom-right">Don't forget your password</b> </label>
                         </section>
 
                         <section>
                             <label class="input"> <i class="icon-append fa fa-lock"></i>
-                                <input type="password" name="password_confirmation" placeholder="Confirm password">
+                                {{--<input type="password" name="password_confirmation" placeholder="Confirm password">--}}
+                                {!! Form::password('password_confirmation', null, ['placeholder' => 'Confirm password']) !!}
                                 <b class="tooltip tooltip-bottom-right">Don't forget your password</b> </label>
                         </section>
                     </fieldset>
@@ -51,12 +55,14 @@
                         <div class="row">
                             <section class="col col-6">
                                 <label class="input">
-                                    <input type="text" name="title" placeholder="Title">
+                                    {{--<input type="text" name="title" placeholder="Title">--}}
+                                    {!! Form::text('title', null, ['placeholder' => 'Title']) !!}
                                 </label>
                             </section>
                             <section class="col col-6">
                                 <label class="input">
-                                    <input type="text" name="first_name" placeholder="First name">
+                                    {{--<input type="text" name="first_name" placeholder="First name">--}}
+                                    {!! Form::text('first_name', null, ['placeholder' => 'First name']) !!}
                                 </label>
                             </section>
                         </div>
@@ -64,12 +70,14 @@
                         <div class="row">
                             <section class="col col-6">
                                 <label class="input">
-                                    <input type="text" name="middle_name" placeholder="Middle name">
+                                    {{--<input type="text" name="middle_name" placeholder="Middle name">--}}
+                                    {!! Form::text('middle_name', null, ['placeholder' => 'Middle name']) !!}
                                 </label>
                             </section>
                             <section class="col col-6">
                                 <label class="input">
-                                    <input type="text" name="last_name" placeholder="Last name">
+                                    {{--<input type="text" name="last_name" placeholder="Last name">--}}
+                                    {!! Form::text('middle_name', null, ['placeholder' => 'Middle name']) !!}
                                 </label>
                             </section>
                         </div>

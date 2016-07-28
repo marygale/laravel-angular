@@ -78,10 +78,6 @@ class User extends Model implements AuthenticatableContract,
         return $this->label;
     }
 
-    /*public function _roles()
-    {
-        return $this->belongsTo(Roles::class, 'roles', 'roles');
-    }*/
     public function _roles()
     {
        return $this->belongsToMany(Roles::class, 'role_user', 'user', 'roles');
