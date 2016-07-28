@@ -54,8 +54,36 @@ class User extends Model implements AuthenticatableContract,
      */
     protected $hidden = ['password', 'remember_token'];
 
+    protected $appends = ['full_name', 'search_action', 'role_label'];
+
     public function get_all_user()
     {
-        return User::all();
+        $users = User::all();
+        foreach($users as $user){
+            $roles = $user->_roles()->where('user', $user->user)->getResults();
+            foreach($roles as $role){
+                $user->label = $role->label;
+            }
+        }
+       return $users;
+    }
+
+    public function getFullNameAttribute()  
+    {
+        return $this->title .'. '. $this->first_name .' '. $this->last_name;
+    }
+
+    public function getRoleLabelAttribute()
+    {
+        return $this->label;
+    }
+
+    /*public function _roles()
+    {
+        return $this->belongsTo(Roles::class, 'roles', 'roles');
+    }*/
+    public function _roles()
+    {
+       return $this->belongsToMany(Roles::class, 'role_user', 'user', 'roles');
     }
 }

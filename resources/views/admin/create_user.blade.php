@@ -83,10 +83,20 @@
                                         <option value="e">Prefer not to answer</option>
                                     </select> <i></i> </label>
                             </section>
-                            <section class="col col-6">
+                            {{--<section class="col col-6">
                                 <label class="input"> <i class="icon-append fa fa-calendar"></i>
                                     <input type="text" name="request" placeholder="Request activation on" class="datepicker" data-dateformat='dd/mm/yy'>
                                 </label>
+                            </section>--}}
+                            <section class="col col-6">
+                                <label class="select">
+                                    <select name="role">
+                                        <option value="0" selected="" disabled="">Role</option>
+                                        <option value="1">Admin</option>
+                                        <option value="2">Content Editor</option>
+                                        <option value="3">Author</option>
+                                        <option value="4">Subscriber</option>
+                                    </select> <i></i> </label>
                             </section>
                         </div>
 
