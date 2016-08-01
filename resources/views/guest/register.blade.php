@@ -12,25 +12,25 @@
                 <fieldset>
                     <section>
                         <label class="input"> <i class="icon-append fa fa-user"></i>
-                            <input type="text" name="username" placeholder="Username">
+                            {!! Form::text('username', null, ['placeholder' => 'Username']) !!}
                             <b class="tooltip tooltip-bottom-right">Needed to enter the website</b> </label>
                     </section>
 
                     <section>
                         <label class="input"> <i class="icon-append fa fa-envelope"></i>
-                            <input type="email" name="email" placeholder="Email address">
+                            {!! Form::email('email', null, ['placeholder' => 'Email address']) !!}
                             <b class="tooltip tooltip-bottom-right">Needed to verify your account</b> </label>
                     </section>
 
                     <section>
                         <label class="input"> <i class="icon-append fa fa-lock"></i>
-                            <input type="password" name="password" placeholder="Password" id="password">
+                            {!! Form::password('password', null, ['placeholder' => 'Password', 'id' => 'password']) !!}
                             <b class="tooltip tooltip-bottom-right">Don't forget your password</b> </label>
                     </section>
 
                     <section>
                         <label class="input"> <i class="icon-append fa fa-lock"></i>
-                            <input type="password" name="passwordConfirm" placeholder="Confirm password">
+                            {!! Form::password('password_confirmation', null, ['placeholder' => 'Confirm password']) !!}
                             <b class="tooltip tooltip-bottom-right">Don't forget your password</b> </label>
                     </section>
                 </fieldset>
@@ -39,12 +39,12 @@
                     <div class="row">
                         <section class="col col-6">
                             <label class="input">
-                                <input type="text" name="firstname" placeholder="First name">
+                                {!! Form::text('first_name', null, ['placeholder' => 'First name']) !!}
                             </label>
                         </section>
                         <section class="col col-6">
                             <label class="input">
-                                <input type="text" name="lastname" placeholder="Last name">
+                                {!! Form::text('last_name', null, ['placeholder' => 'Last name']) !!}
                             </label>
                         </section>
                     </div>
@@ -60,9 +60,17 @@
                                 </select> <i></i> </label>
                         </section>
                         <section class="col col-6">
-                            <label class="input"> <i class="icon-append fa fa-calendar"></i>
+                            {{--<label class="input"> <i class="icon-append fa fa-calendar"></i>
                                 <input type="text" name="request" placeholder="Request activation on" class="datepicker" data-dateformat='dd/mm/yy'>
-                            </label>
+                            </label>--}}
+                            <label class="select">
+                                <select name="role">
+                                    <option value="0" selected="" disabled="">Role</option>
+                                    <option value="1">Admin</option>
+                                    <option value="2">Content Editor</option>
+                                    <option value="3">Author</option>
+                                    <option value="4">Subscriber</option>
+                                </select> <i></i> </label>
                         </section>
                     </div>
 

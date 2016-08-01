@@ -14,4 +14,9 @@ class Roles extends \Eloquent
     {
         return $this->belongsToMany(User::class, 'role_user', 'roles', 'user');
     }
+
+    public function get_all_roles()
+    {
+        return Roles::all()->pluck('label', 'roles');
+    }
 }

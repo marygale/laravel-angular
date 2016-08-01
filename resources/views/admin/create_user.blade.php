@@ -20,7 +20,7 @@
             <!-- widget content -->
             <div class="widget-body no-padding">
 
-                    {!! Form::open(['url' => action('Auth\AuthController@register'), 'id' => "smart-form-register", 'class' => "smart-form client-form"]) !!}
+                    {!! Form::open(['url' => action('UserController@post_create'), 'id' => "smart-form-register", 'class' => "smart-form client-form"]) !!}
                     <fieldset>
                         <section>
                             <label class="input"> <i class="icon-append fa fa-user"></i>
@@ -77,7 +77,7 @@
                             <section class="col col-6">
                                 <label class="input">
                                     {{--<input type="text" name="last_name" placeholder="Last name">--}}
-                                    {!! Form::text('middle_name', null, ['placeholder' => 'Middle name']) !!}
+                                    {!! Form::text('last_name', null, ['placeholder' => 'Last name']) !!}
                                 </label>
                             </section>
                         </div>

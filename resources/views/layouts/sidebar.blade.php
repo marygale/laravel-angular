@@ -26,7 +26,7 @@
                         <a href="{!! action('UserController@user_list') !!}">All Users</a>
                     </li>
                     <li>
-                        <a href="{!! action('UserController@create') !!}">New Users</a>
+                        <a href="{!! action('UserController@user_create') !!}">New Users</a>
                     </li>
                     <li>
                         <a href="users/profile">Your Profile</a>

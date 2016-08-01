@@ -56,6 +56,8 @@ class User extends Model implements AuthenticatableContract,
 
     protected $appends = ['full_name', 'search_action', 'role_label'];
 
+    public static $gender = ['m' => 'Male', 'f' => 'Female', 'e' =>  'Prefer not to answer'];
+
     public function get_all_user()
     {
         $users = User::all();
@@ -70,7 +72,7 @@ class User extends Model implements AuthenticatableContract,
 
     public function getFullNameAttribute()  
     {
-        return $this->title .'. '. $this->first_name .' '. $this->last_name;
+        return $this->title .' '. $this->first_name .' '. $this->last_name;
     }
 
     public function getRoleLabelAttribute()

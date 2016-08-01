@@ -36,6 +36,7 @@
                                 <th>Email</th>
                                 <th>Country</th>
                                 <th>Role</th>
+                                <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -45,6 +46,7 @@
                                 <td>{{$user->email}}</td>
                                 <td>{{$user->country}}</td>
                                 <td>{{$user->label}}</td>
+                                <td><a href="{!! action('UserController@user_edit', $user) !!}">Edit</a> | <a href="">Deactivate</a> </td>
                             </tr>
                             @endforeach
 
