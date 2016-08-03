@@ -212,3 +212,8 @@
 	p.validation-message {
 		color:#a90329!important;
 	}
+
+	.user-description{
+		padding:5px;
+		width: 99%;
+	}

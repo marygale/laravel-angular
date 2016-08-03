@@ -23,3 +23,7 @@ Route::get('admin/user/all', 'UserController@user_list');
 /** Edit User */
 Route::get('admin/user/{user}/edit', 'UserController@user_edit');
 Route::post('admin/user/{user}/edit', 'UserController@post_user_edit');
+
+/** Your Profile */
+Route::get('admin/profile', 'UserController@profile_view');
+Route::post('admin/profile/edit', 'UserController@profile_edit');

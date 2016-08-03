@@ -47,4 +47,10 @@ class UserController extends Controller
         $user->update($request->except('username'));
         return \back()->with('success', 'User has been updated successfully!');
     }
+
+    public function profile_view()
+    {
+        $user = \Auth::user();
+        return view('admin.user.profile_view', compact('user'));
+    }
 }

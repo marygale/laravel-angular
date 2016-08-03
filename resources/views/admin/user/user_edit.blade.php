@@ -62,6 +62,20 @@
                             </label>
                         </section>
                     </div>
+
+                    <div class="row">
+                        <section class="col col-6">
+                            <label class="select">
+                                @include('admin.others.country_list', ['default' => $user->country])
+                            </label>
+                        </section>
+                        <section class="col col-6">
+                            <label class="input">
+                                {!! Form::text('state', null, ['placeholder' => 'State']) !!}
+                            </label>
+                        </section>
+                    </div>
+
                     <div class="row">
                         <section class="col col-6">
                             <label class="select">
@@ -74,6 +88,12 @@
                                  <i></i> </label>
                         </section>
                     </div>
+
+                    <section>
+                        <label class="input">
+                            {!! Form::textarea('description', null, ['placeholder' => 'Description', 'cols' => '196', 'rows' => '10', 'class' => 'user-description']) !!}
+
+                    </section>
                 </fieldset>
                 <footer>
                     <button type="submit" class="btn btn-primary">
