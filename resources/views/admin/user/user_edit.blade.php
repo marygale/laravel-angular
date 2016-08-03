@@ -90,9 +90,10 @@
                     </div>
 
                     <section>
-                        <label class="input">
+                        <label class="textarea"> <i class="icon-append fa fa-pencil-square"></i>
                             {!! Form::textarea('description', null, ['placeholder' => 'Description', 'cols' => '196', 'rows' => '10', 'class' => 'user-description']) !!}
-
+                            <b class="tooltip tooltip-bottom-right"><i class="fa fa-warning txt-color-teal"></i> Some helpful information</b>
+                        </label>
                     </section>
                 </fieldset>
                 <footer>
