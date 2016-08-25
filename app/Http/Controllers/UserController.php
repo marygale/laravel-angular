@@ -22,9 +22,10 @@ class UserController extends Controller
 
     public function post_create(Requests\AdminCreateUserRequest $request)
     {
-        $user = User::create($request->all());
+        $arData = $request->except('password', 'password_confirmation');
+        $arData['password'] = bcrypt($request->input('password'));
+        $user = User::create($arData);
         $user->_roles()->attach($user->user, ['roles' => $request->input('role')]);
-
         return \redirect()->action('UserController@user_edit', $user);
 
     }
