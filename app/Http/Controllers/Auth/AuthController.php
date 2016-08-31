@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Events\UserWasRegistered;
+use App\Helpers\Helper;
 use App\Models\User;
+use App\Models\Login_Token;
+use Illuminate\Http\Request;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
@@ -32,7 +36,7 @@ class AuthController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest', ['except' => 'logout', 'confirm_email']);
+        $this->middleware('guest', ['except' => 'logout', 'confirm_email', 'login_token']);
     }
 
     /**
@@ -62,12 +66,23 @@ class AuthController extends Controller
         $data['role'] = 4;
         \session()->flush();
         $arUser = User::create($data);
-        //if($arUser) $user->_roles()->attach(2, ['roles' => $data['role']]);dd($arUser);
         return $arUser;
-        /*return User::create([
-            'username' => $data['username'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);*/
+    }
+
+    protected function authenticated(Request $request, User $user)
+    {
+        $redirect_url = Helper::authentication_logic($user);
+        return \redirect()->to($redirect_url);
+    }
+
+    public function login_token($token)
+    {
+        $token = Login_Token::whereToken($token)->firstOrFail();
+
+        if ($token->created_at->diffInHours() >= 24){
+            $token->delete();
+            return \redirect('/');
+        }
+
     }
 }
