@@ -26,7 +26,7 @@ Route::post('admin/user/{user}/edit', 'UserController@post_user_edit');
 
 /** Your Profile */
 Route::get('admin/profile', 'UserController@profile_view');
-Route::post('admin/profile/edit', 'UserController@profile_edit');
+Route::post('admin/profile/{user}/edit', 'UserController@profile_edit');
 
 /** Jobs */
 Route::get('admin/jobs/create', 'JobController@create_job');

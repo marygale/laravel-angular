@@ -103,7 +103,7 @@
                         <a href="forum.html">Forum Layout</a>
                     </li>
                     <li>
-                        <a href="profile.html">Profile</a>
+                        <a href="{!! action('UserController@profile_view') !!}}">Profile</a>
                     </li>
                     <li>
                         <a href="timeline.html">Timeline</a>

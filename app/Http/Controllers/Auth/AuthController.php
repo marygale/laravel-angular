@@ -69,11 +69,11 @@ class AuthController extends Controller
         return $arUser;
     }
 
-    protected function authenticated(Request $request, User $user)
+    /*protected function authenticated(Request $request, User $user)
     {
         $redirect_url = Helper::authentication_logic($user);
         return \redirect()->to($redirect_url);
-    }
+    }*/
 
     public function login_token($token)
     {
