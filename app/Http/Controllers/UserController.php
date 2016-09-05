@@ -54,4 +54,15 @@ class UserController extends Controller
         $user = \Auth::user();
         return view('admin.user.profile_view', compact('user'));
     }
+
+    public function profile_edit()
+    {
+        $user = \Auth::user();
+        return view('admin.user.profile_edit', compact('user'));
+    }
+
+    public function post_profile_edit()
+    {
+        
+    }
 }
