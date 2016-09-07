@@ -109,7 +109,7 @@
                                             </h4>
                                         </div>
                                     </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-6 editable-hover">
                                         <h1>{!! $user->first_name !!} <span class="semi-bold">{!! $user->last_name !!}</span>
                                             <br>
                                             <small> {!! $user->designation !!}, {!! $user->company !!}</small>

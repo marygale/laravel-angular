@@ -25,11 +25,17 @@
 
                     <!-- widget content -->
                     <div class="widget-body">
-                        <p>
+                        {{--<p>
                             You can filter and search users by email, country, first name and last name
                             <code>this feature is coming soon ... </code>
+                        </p>--}}
+                        <p>
+                        <div class="input-group col-md-5">
+                            <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                            <input class="form-control" placeholder="Filter" type="text" aria-controls="dt_basic">
+                        </div>
                         </p>
-                        <table class="table table-bordered">
+                        <table class="table table-bordered" ng-controller="SearchController">
                             <thead>
                             <tr>
                                 <th>Name</th>
@@ -63,4 +69,7 @@
 
         </article>
     </div>
+@endsection
+@section('page_script')
+    <script src="{{asset('js/controllers/SearchController.js')}}"></script>
 @endsection

@@ -220,3 +220,7 @@
 	.other-profile{
 		margin:5px;
 	}
+
+	.editable-hover{
+		cursor: pointer;
+	}
