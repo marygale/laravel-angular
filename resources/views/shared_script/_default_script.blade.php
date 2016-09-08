@@ -58,6 +58,7 @@
 <script src="{{asset('js/vendor/angular-ui-router.js')}}"></script>
 <script src="{{asset('js/app.js')}}"></script>
 <script src="{{asset('js/build/controllers.min.js')}}"></script>
+<script src="{{asset('js/config.js')}}"></script>
 
 <!--[if IE 7]>
 

@@ -1,5 +1,5 @@
 angular
     .module('don')
-    .controller('SearchController', function($scope, Auth){
+    .controller('SearchController', function($scope){
        console.log('search');
     });
